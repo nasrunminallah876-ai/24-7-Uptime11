@@ -66,8 +66,8 @@ if [ "$OPTION" = "3" ]; then
   echo "✅ CodeSandbox mode enabled"
   echo "----------------------------------------"
   echo "➡ After server starts:"
-  echo "   Open Ports / Preview"
-  echo "   Open port 8080"
+  echo "   Open Ports / Preview."
+  echo "   Open port 8081"
   echo "➡ Use /ping endpoint for uptime"
   echo "----------------------------------------"
   echo ""
@@ -78,7 +78,7 @@ fi
 # -----------------------------
 # IDX / VPS mode
 # -----------------------------
-echo "[+] Starting backend on port 8080..."
+echo "[+] Starting backend on port 8081..."
 $PY connector.py &
 
 sleep 3
@@ -97,4 +97,4 @@ echo "========================================"
 echo " Cloudflare tunnel starting..."
 echo "========================================"
 
-./cloudflared tunnel --url http://localhost:8080
+./cloudflared tunnel --url http://localhost:8081
